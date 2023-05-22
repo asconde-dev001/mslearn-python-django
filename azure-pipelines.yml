@@ -14,7 +14,10 @@ variables:
   webAppName: 'python-cicd-webapp'
 
   # Agent VM image name
-  vmImageName: 'My Agent Pool (Mac)'
+  # vmImageName: 'My Agent Pool (Mac)'
+
+  # Use Agent pool name instead of vmImageName for self hosted
+  agentPoolName: 'My Agent Pool (Mac)'
 
   # Environment name
   environmentName: 'python-cicd-webapp'
@@ -30,6 +33,8 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
+    pool:
+      name: $(agentPoolName)
     steps:
     - task: UsePythonVersion@0
       inputs:
