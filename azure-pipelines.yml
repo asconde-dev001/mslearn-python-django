@@ -14,7 +14,7 @@ variables:
   webAppName: 'python-cicd-webapp'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'My Agent Pool (Mac)'
 
   # Environment name
   environmentName: 'python-cicd-webapp'
